@@ -72,7 +72,7 @@
     ═══════════════════════════════════════ -->
     <section class="py-12 bg-gray-950 border-y border-gray-800/60">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="flex flex-wrap justify-center gap-16 text-center">
           <div v-for="stat in stats" :key="stat.label" class="group">
             <p class="text-4xl font-bold text-primary mb-1 section-title">{{ stat.value }}</p>
             <p class="text-xs tracking-widest text-gray-400 uppercase">{{ stat.label }}</p>
@@ -296,6 +296,7 @@ const stats = [
   { value: '2022', label: 'Legitimerad naprapat' },
   { value: '100%', label: 'Individanpassat' },
   { value: '3', label: 'Tjänsteområden' },
+  { value: '7 dagar', label: 'Öppet i veckan' },
 ];
 
 const values = [
