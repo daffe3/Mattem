@@ -296,7 +296,6 @@ const stats = [
   { value: '2022', label: 'Legitimerad naprapat' },
   { value: '100%', label: 'Individanpassat' },
   { value: '3', label: 'Tjänsteområden' },
-  { value: '7 dagar', label: 'Öppet i veckan' },
 ];
 
 const values = [
