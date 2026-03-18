@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col bg-background text-accent font-sans">
+
     <header
       :class="[
         'fixed top-0 left-0 w-full z-40 transition-all duration-500',
@@ -94,12 +95,29 @@
           </div>
 
           <div>
-            <p class="text-sm font-bold tracking-widest uppercase text-primary mb-4">Snabblänkar</p>
-            <ul class="space-y-2">
-              <li v-for="link in navLinks" :key="link.href">
-                <NuxtLink :to="link.href" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-                  {{ link.label }}
-                </NuxtLink>
+            <p class="text-sm font-bold tracking-widest uppercase text-primary mb-4">Sociala medier</p>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="https://www.instagram.com/mattiasrehab/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                >
+                  <i class="pi pi-instagram text-primary"></i>
+                  @mattiasrehab
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/mattias-mauritzson-eldh-b16169156/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                >
+                  <i class="pi pi-linkedin text-primary"></i>
+                  Mattias Mauritzson Eldh
+                </a>
               </li>
             </ul>
           </div>
