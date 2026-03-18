@@ -1,6 +1,5 @@
 <template>
   <div class="min-h-screen flex flex-col bg-background text-accent font-sans">
-    <!-- Navbar -->
     <header
       :class="[
         'fixed top-0 left-0 w-full z-40 transition-all duration-500',
@@ -13,7 +12,6 @@
           <span class="text-xs tracking-[0.25em] text-primary uppercase">Naprapati</span>
         </NuxtLink>
 
-        <!-- Hamburger -->
         <button
           @click="toggleMenu"
           class="sm:hidden text-primary hover:text-white focus:outline-none z-50 p-2"
@@ -22,16 +20,15 @@
           <i :class="isMenuOpen ? 'pi pi-times text-2xl' : 'pi pi-bars text-2xl'"></i>
         </button>
 
-        <!-- Desktop nav -->
         <nav class="hidden sm:flex items-center gap-8">
-          <NuxtLink
+          <a
             v-for="link in navLinks"
             :key="link.href"
-            :to="link.href"
+            :href="link.href"
             class="text-sm tracking-wider text-gray-300 hover:text-primary transition-colors duration-300 uppercase font-medium"
           >
             {{ link.label }}
-          </NuxtLink>
+          </a>
           <NuxtLink
             to="https://www.bokadirekt.se/places/mauritzson-naprapati-norion-bank-arena-46503"
             target="_blank"
@@ -44,7 +41,6 @@
       </div>
     </header>
 
-    <!-- Mobile menu -->
     <transition name="fade-slide">
       <nav
         v-if="isMenuOpen"
@@ -58,13 +54,13 @@
         </button>
         <ul class="flex flex-col space-y-8 text-center">
           <li v-for="link in navLinks" :key="link.href">
-            <NuxtLink
-              :to="link.href"
+            <a
+              :href="link.href"
               class="text-2xl font-bold tracking-widest text-gray-200 hover:text-primary transition-colors duration-300 uppercase"
               @click="closeMenu"
             >
               {{ link.label }}
-            </NuxtLink>
+            </a>
           </li>
           <li>
             <NuxtLink
@@ -85,11 +81,10 @@
       <slot />
     </main>
 
-    <!-- Footer -->
     <footer class="bg-gray-950 border-t border-gray-800 pt-16 pb-8">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          <!-- Brand -->
+
           <div>
             <p class="text-xl font-bold tracking-wide text-white mb-1">MAURITZSON</p>
             <p class="text-xs tracking-[0.25em] text-primary uppercase mb-4">Naprapati</p>
@@ -98,7 +93,6 @@
             </p>
           </div>
 
-          <!-- Snabblänkar -->
           <div>
             <p class="text-sm font-bold tracking-widest uppercase text-primary mb-4">Snabblänkar</p>
             <ul class="space-y-2">
@@ -110,7 +104,6 @@
             </ul>
           </div>
 
-          <!-- Kontakt -->
           <div>
             <p class="text-sm font-bold tracking-widest uppercase text-primary mb-4">Kontakt</p>
             <ul class="space-y-3 text-sm text-gray-400">
@@ -211,7 +204,6 @@ body {
   margin: 0 auto;
 }
 
-/* CTA-knapp — amber/varm guld sticker ut på mörk bakgrund */
 .cta-btn {
   background: linear-gradient(135deg, #e8a020, #d4901a);
   color: #111;
@@ -234,7 +226,6 @@ body {
   transform: translateY(-16px);
 }
 
-/* Sektion-rubrik gemensam stil */
 .section-title {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;

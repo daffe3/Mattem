@@ -8,23 +8,22 @@
       id="home"
       class="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
     >
-      <!-- Bakgrundsbild med overlay -->
+
       <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('/mattias-mauritzson-eldh.jpg')"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-gray-950/90 via-gray-950/70 to-gray-950/40"></div>
 
-      <!-- Decorativ linje vänster -->
       <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-primary to-transparent opacity-40"></div>
 
       <div class="relative z-10 container mx-auto px-6 py-32">
         <div class="max-w-2xl">
-          <!-- Tagline -->
+
           <p class="text-xs tracking-[0.3em] text-primary uppercase font-medium mb-6 flex items-center gap-3">
             <span class="inline-block w-8 h-px bg-primary"></span>
             Naprapat i Danderyd · Stockholm
           </p>
 
           <!-- Rubrik -->
-          <h1 class="section-title text-5xl md:text-7xl font-bold leading-[1.05] mb-6 text-white">
+          <h1 class="section-title text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.05] mb-6 text-white">
             Ont i ryggen,<br>
             <span class="text-primary">nacken</span><br>
             eller axlarna?
@@ -34,7 +33,6 @@
             Mattias Mauritzson Eldh hjälper dig tillbaka till ett smärtfritt, aktivt liv — med individanpassad naprapati, massage och personlig träning.
           </p>
 
-          <!-- Social proof -->
           <div class="flex items-center gap-2 mb-10">
             <div class="flex">
               <span v-for="i in 5" :key="i" class="text-yellow-400 text-lg">★</span>
@@ -42,7 +40,6 @@
             <p class="text-gray-300 text-sm">Högt betyg av nöjda patienter</p>
           </div>
 
-          <!-- CTAs -->
           <div class="flex flex-wrap gap-4">
             <button
               class="cta-btn font-bold py-4 px-10 text-base rounded-full tracking-wide uppercase"
@@ -60,7 +57,6 @@
         </div>
       </div>
 
-      <!-- Scroll-indikator -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 animate-bounce">
         <i class="pi pi-angle-down text-xl"></i>
       </div>
@@ -88,23 +84,22 @@
     <section id="om-oss" class="py-24 bg-background">
       <div class="container mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
-          <!-- Bild -->
+
           <div class="relative">
             <div class="absolute -inset-4 bg-primary/5 rounded-3xl blur-2xl"></div>
             <img
               src="/mattias-mauritzson-eldh.jpg"
               alt="Mattias Mauritzson Eldh, Naprapat"
-              class="relative w-full max-w-sm mx-auto rounded-2xl object-cover shadow-2xl border border-gray-800"
+              class="relative w-full max-w-xs sm:max-w-sm mx-auto rounded-2xl object-cover shadow-2xl border border-gray-800"
               style="aspect-ratio: 3/4; object-fit: cover;"
             />
-            <!-- Badge -->
+
             <div class="absolute -bottom-4 -right-4 md:-right-8 bg-primary text-gray-900 rounded-2xl px-5 py-3 shadow-xl">
               <p class="text-xs font-bold uppercase tracking-wider">Legitimerad</p>
               <p class="text-sm font-bold">Naprapat</p>
             </div>
           </div>
 
-          <!-- Text -->
           <div>
             <p class="text-xs tracking-[0.3em] text-primary uppercase font-medium mb-4 flex items-center gap-3">
               <span class="inline-block w-8 h-px bg-primary"></span>
@@ -125,7 +120,6 @@
               </p>
             </div>
 
-            <!-- Värden -->
             <div class="grid grid-cols-2 gap-4 mt-8">
               <div v-for="value in values" :key="value" class="flex items-center gap-2 text-sm text-gray-300">
                 <i class="pi pi-check-circle text-primary text-xs"></i>
@@ -155,13 +149,13 @@
           </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div
             v-for="(service, i) in allServices"
             :key="i"
             class="service-card group relative bg-surface border border-gray-800 rounded-2xl p-8 hover:border-primary/50 transition-all duration-400 overflow-hidden"
           >
-            <!-- Hover-glow -->
+
             <div class="absolute inset-0 bg-primary/3 opacity-0 group-hover:opacity-100 transition-opacity duration-400 rounded-2xl pointer-events-none"></div>
 
             <div class="relative">
@@ -176,7 +170,7 @@
                 rel="noreferrer"
                 class="text-primary text-sm font-semibold hover:text-white transition-colors duration-300 flex items-center gap-1 group/link"
               >
-                Boka denna tjänst
+                Vidare till bokning
                 <i class="pi pi-arrow-right text-xs transition-transform duration-300 group-hover/link:translate-x-1"></i>
               </a>
             </div>
@@ -204,7 +198,7 @@
           </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <div
             v-for="(review, i) in reviews"
             :key="i"
@@ -244,8 +238,8 @@
           <p class="text-gray-400 max-w-md mx-auto">Frågor? Hör gärna av dig direkt, eller boka tid via BokaDirekt.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <!-- Kontaktinfo -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
           <div class="space-y-4">
             <div
               v-for="contact in contactInfo"
@@ -261,7 +255,6 @@
               </div>
             </div>
 
-            <!-- Boka-knapp -->
             <button
               class="cta-btn w-full font-bold py-4 px-8 text-base rounded-2xl tracking-wide uppercase mt-2"
               @click="navigateTo('https://www.bokadirekt.se/places/mauritzson-naprapati-norion-bank-arena-46503', { external: true, open: { target: '_blank', noreferrer: true } })"
@@ -270,8 +263,7 @@
             </button>
           </div>
 
-          <!-- Karta -->
-          <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl" style="min-height: 380px; position: relative;">
+          <div class="overflow-hidden rounded-2xl border border-gray-800 shadow-2xl relative h-64 md:h-auto md:min-h-[380px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.0494432247348!2d18.069774577239247!3d59.38711467472099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f828a6f23b18f%3A0x6b77e8a93259850c!2sRinkebyv%C3%A4gen%2020%2C%20182%2036%20Danderyd%2C%20Sweden!5e0!3m2!1sen!2sse!4v1700000000000!5m2!1sen!2sse"
               width="100%"
@@ -296,6 +288,7 @@ const stats = [
   { value: '2022', label: 'Legitimerad naprapat' },
   { value: '100%', label: 'Individanpassat' },
   { value: '3', label: 'Tjänsteområden' },
+  { value: '7 dagar', label: 'Öppet i veckan' },
 ];
 
 const values = [
