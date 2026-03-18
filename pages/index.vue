@@ -251,7 +251,7 @@
               </div>
               <div>
                 <p class="text-xs tracking-widest text-gray-500 uppercase mb-1">{{ contact.label }}</p>
-                <p class="text-white font-medium">{{ contact.value }}</p>
+                <p class="text-white font-medium break-all">{{ contact.value }}</p>
               </div>
             </div>
 
